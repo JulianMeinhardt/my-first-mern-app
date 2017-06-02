@@ -1,0 +1,27 @@
+{"message":"error while connecting to mongodb","name":"MongoError","stack":"MongoError: failed to connect to server [localhost:27017] on first connect [MongoError: connect ECONNREFUSED 127.0.0.1:27017]\n    at Pool.<anonymous> (/home/julian/Code/my-first-mern-app/node_modules/mongodb-core/lib/topologies/server.js:328:35)\n    at emitOne (events.js:96:13)\n    at Pool.emit (events.js:191:7)\n    at Connection.<anonymous> (/home/julian/Code/my-first-mern-app/node_modules/mongodb-core/lib/connection/pool.js:280:12)\n    at Object.onceWrapper (events.js:293:19)\n    at emitTwo (events.js:106:13)\n    at Connection.emit (events.js:194:7)\n    at Socket.<anonymous> (/home/julian/Code/my-first-mern-app/node_modules/mongodb-core/lib/connection/connection.js:177:49)\n    at Object.onceWrapper (events.js:293:19)\n    at emitOne (events.js:96:13)\n    at Socket.emit (events.js:191:7)\n    at emitErrorNT (net.js:1279:8)\n    at _combinedTickCallback (internal/process/next_tick.js:80:11)\n    at process._tickCallback (internal/process/next_tick.js:104:9)","level":"error","timestamp":"2017-06-02T20:31:32.969Z"}
+{"message":"error while connecting to mongodb","name":"MongoError","stack":"MongoError: failed to connect to server [localhost:27017] on first connect [MongoError: connect ECONNREFUSED 127.0.0.1:27017]\n    at Pool.<anonymous> (/home/julian/Code/my-first-mern-app/node_modules/mongodb-core/lib/topologies/server.js:328:35)\n    at emitOne (events.js:96:13)\n    at Pool.emit (events.js:191:7)\n    at Connection.<anonymous> (/home/julian/Code/my-first-mern-app/node_modules/mongodb-core/lib/connection/pool.js:280:12)\n    at Object.onceWrapper (events.js:293:19)\n    at emitTwo (events.js:106:13)\n    at Connection.emit (events.js:194:7)\n    at Socket.<anonymous> (/home/julian/Code/my-first-mern-app/node_modules/mongodb-core/lib/connection/connection.js:177:49)\n    at Object.onceWrapper (events.js:293:19)\n    at emitOne (events.js:96:13)\n    at Socket.emit (events.js:191:7)\n    at emitErrorNT (net.js:1279:8)\n    at _combinedTickCallback (internal/process/next_tick.js:80:11)\n    at process._tickCallback (internal/process/next_tick.js:104:9)","level":"error","timestamp":"2017-06-02T20:32:03.755Z"}
+{"level":"error","message":"lets see if this works","timestamp":"2017-06-02T20:35:09.775Z"}
+{"level":"error","message":"lets see if this works","timestamp":"2017-06-02T20:35:45.403Z"}
+{"level":"info","message":"listening on Port 3000","timestamp":"2017-06-02T20:35:54.576Z"}
+{"level":"error","message":"lets see if this works","timestamp":"2017-06-02T20:36:01.009Z"}
+{"level":"info","message":"listening on Port 3000","timestamp":"2017-06-02T20:36:36.729Z"}
+{"level":"info","message":"listening on Port 3000","timestamp":"2017-06-02T20:45:48.055Z"}
+{"level":"info","message":"listening on Port 3000","timestamp":"2017-06-02T20:54:37.696Z"}
+{"level":"error","message":"lets see if this works","timestamp":"2017-06-02T20:54:45.395Z"}
+{"level":"info","message":"listening on Port 3000","timestamp":"2017-06-02T20:55:06.518Z"}
+{"level":"info","message":"listening on Port 3000","timestamp":"2017-06-02T20:56:40.828Z"}
+{"level":"info","message":"listening on Port 3000","timestamp":"2017-06-02T20:56:44.880Z"}
+{"level":"info","message":"listening on Port 3000","timestamp":"2017-06-02T20:57:35.540Z"}
+{"level":"info","message":"listening on Port 3000","timestamp":"2017-06-02T20:58:49.306Z"}
+{"level":"info","message":"listening on Port 3000","timestamp":"2017-06-02T20:58:53.788Z"}
+{"level":"info","message":"lets see if this works","timestamp":"2017-06-02T20:59:11.247Z"}
+{"level":"info","message":"listening on Port 3000","timestamp":"2017-06-02T21:01:01.034Z"}
+{"level":"info","message":"listening on Port 3000","timestamp":"2017-06-02T21:01:09.995Z"}
+{"level":"info","message":"lets see if this works","timestamp":"2017-06-02T21:01:14.441Z"}
+{"level":"info","message":"listening on Port 3000","timestamp":"2017-06-02T21:02:28.694Z"}
+{"level":"info","message":"lets see if this works","timestamp":"2017-06-02T21:02:33.166Z"}
+{"level":"info","message":"listening on Port 3000","timestamp":"2017-06-02T21:10:20.049Z"}
+{"level":"info","message":"listening on Port 3000","timestamp":"2017-06-02T21:10:24.876Z"}
+{"level":"info","message":"listening on Port 3000","timestamp":"2017-06-02T21:10:28.144Z"}
+{"level":"info","message":"listening on Port 3000","timestamp":"2017-06-02T21:10:44.188Z"}
+{"level":"info","message":"lets see if this works","timestamp":"2017-06-02T21:10:49.092Z"}

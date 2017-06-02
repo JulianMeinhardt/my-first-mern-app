@@ -1,29 +1,32 @@
 
+const mongoose = require('mongoose');
 const express = require('express');
-const bodyParser= require('body-parser');
+const winston = require('winston');
 
-const MongoClient = require('mongodb').MongoClient;
+const controllers = require('./src/controllers');
+winston.add(winston.transports.File, { filename: 'logs/error.log' });
 
+// start express app
 const app = express();
 
-app.use(bodyParser.urlencoded({extended: true}))
+// teach app to use all controllers
+app.use(controllers);
 
+// Maybe this will be set by environment later, so save to a const
+let url = 'mongodb://localhost:27017/Picture-Organizr'
 
-MongoClient.connect('link-to-mongodb', (err, database) => {
-  // ... start the server
-})
+mongoose.connect(url, (err, db) => {
+  if (err) {
+    return winston.error('error while connecting to mongodb', err);
+  }
 
-app.listen(3000, function() {
-  console.log('listening on 3000');
-})
+  app.listen(3000, () => {
+    winston.info('listening on Port 3000');
+  });
 
-app.get('/', (req, res) => {
-  console.log('__dirname:' + __dirname);
-  res.sendFile(__dirname + '/index.html')
-})
+  app.get('/shutdown', (req, res) => {
+    db.close()
+    res.sendStatus(200)
+  });
+});
 
-app.post('/quotes', (req, res) => {
-  console.log(req.body);
-  res.status = 200;
-  return res;
-})
