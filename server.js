@@ -2,13 +2,17 @@
 const mongoose = require('mongoose');
 const express = require('express');
 const winston = require('winston');
+const bodyParser = require('body-parser');
 const controllers = require('./src/controllers');
+
 
 winston.add(winston.transports.File, { filename: 'logs/error.log' });
 
 // start express app
 const app = express();
 
+// use body parser for app
+app.use(bodyParser.json());
 // teach app to use all controllers
 app.use(controllers);
 

@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/JulianMeinhardt/my-first-mern-app#readme",
   "dependencies": {
-    "body-parser": "^1.17.1",
+    "body-parser": "^1.17.2",
     "express": "^4.15.2",
     "mongoose": "^4.9.9",
     "winston": "^2.3.1"
@@ -31,10 +31,11 @@
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-eslint": "^7.2.3",
+    "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-3": "^6.24.1",
+    "eslint": "^3.19.0",
     "eslint-config-airbnb-base": "^11.2.0",
     "eslint-plugin-import": "^2.3.0",
-    "eslint": "^3.19.0",
     "nodemon": "^1.11.0"
   }
 }

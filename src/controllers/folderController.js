@@ -19,6 +19,7 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
   const Folder = mongoose.model('Folder', folderSchema);
   const folder = new Folder({ ...req.body });
+  winston.info(`folder ist: ${folder}`);
     // everything ok,
   folder.save((err) => {
     if (err) {
@@ -28,9 +29,9 @@ router.post('/', (req, res) => {
       res.send(JSON.stringify('Sorry there was an error saving data to db.'));
     }
 
-    res.sendStatus(201);
-    res.setHeader('Content-Type', 'application/json');
-    res.send(JSON.stringify(req.body));
+    res.set('Content-Type', 'application/json')
+        .status(201)
+        .send(JSON.stringify(req.body));
   });
 });
 
