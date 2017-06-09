@@ -2,8 +2,8 @@
 const mongoose = require('mongoose');
 const express = require('express');
 const winston = require('winston');
-
 const controllers = require('./src/controllers');
+
 winston.add(winston.transports.File, { filename: 'logs/error.log' });
 
 // start express app
@@ -13,7 +13,7 @@ const app = express();
 app.use(controllers);
 
 // Maybe this will be set by environment later, so save to a const
-let url = 'mongodb://localhost:27017/Picture-Organizr'
+const url = 'mongodb://localhost:27017/Picture-Organizr';
 
 mongoose.connect(url, (err, db) => {
   if (err) {
@@ -25,8 +25,8 @@ mongoose.connect(url, (err, db) => {
   });
 
   app.get('/shutdown', (req, res) => {
-    db.close()
-    res.sendStatus(200)
+    db.close();
+    res.sendStatus(200);
   });
 });
 
