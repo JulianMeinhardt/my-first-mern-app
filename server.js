@@ -5,7 +5,8 @@ const winston = require('winston');
 const bodyParser = require('body-parser');
 const controllers = require('./src/controllers');
 
-
+// adds file log
+// TODO: Needs to be refactored to cloud logging?!
 winston.add(winston.transports.File, { filename: 'logs/error.log' });
 
 // start express app
@@ -17,7 +18,8 @@ app.use(bodyParser.json());
 app.use(controllers);
 
 // Maybe this will be set by environment later, so save to a const
-const url = 'mongodb://localhost:27017/Picture-Organizr';
+// helloWorld does not need database
+const url = 'mongodb://localhost:27017/my-first-mern-app';
 
 mongoose.connect(url, (err, db) => {
   if (err) {

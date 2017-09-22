@@ -1,15 +1,3 @@
-Bilder
-
-name
-fileSize
-fileType
-created
-lastUpdated
-uploaded
-uploaded_By
-filepath
-tags
-
 Ordner
 
 name
@@ -19,15 +7,6 @@ lastUpdated
 
 
 Routen:
-
-POST /picture
-	Payload: -metadaten und encoded attachment (base64?!)
-PUT /picture/:id
-	Payload data that needs to be updated
-GET /picture/:id
-	returns information of an attachtment
-DELETE /picture/:id
-	deletes a specific picture (at first the file on harddrive then the entry in database)
 
 GET /folder/:id/pictures
 	list of pictures/subfolders (title, thumbnail?!) of the folder
@@ -40,6 +19,5 @@ PUT /folder
 	Updates metadata of a folder
 DELETE /folder
 	Deletes a folder (if there are no pics/subfolders inside)
-
 DELETE /folder?pics=true
 	Deletes a folder with all pics/subfolders in it
