@@ -16,36 +16,25 @@ router.get('/', (req, res) => {
 router.get('/:name', async (req, res) => {
   try {
     const HelloWorld = mongoose.model('HelloWorld', helloWorldSchema);
-    const resource = await HelloWorld.findOne({ name: req.params.name }, 'name', (err, helloWorld) => {
+    HelloWorld.findOne({ name: req.params.name }, 'name created', (err, helloWorld) => {
       if (err) {
         return null;
       }
       return helloWorld;
+    }).then((helloWorldDB) => {
+      if (helloWorldDB) { // name is already known and registered in the dabase
+        const visitor = {
+          name: helloWorldDB.name,
+          registered: true,
+          registrationDate: helloWorldDB.created,
+        };
+        const resource = new hal.Resource({ ...visitor }, `/${visitor.name}`);
+
+        res.setHeader('status', 200);
+        res.setHeader('Content-Type', 'application/hal+json');
+        res.send(resource);
+      }
     });
-    /* const userName = req.params.name || '';
-    let userInfo = {
-      userName,
-      registered: false,
-    };
-    if (false) { // name is already known and registered in the dabase
-      userInfo = {
-        ...userInfo,
-        registered: true,
-        lastVisit: new Date(),
-        registrationDate: new Date(),
-      };
-    }
-
-    const visitor = {
-      name: 'Hello World By Name',
-      ...userInfo,
-    };
-
-    const resource = new hal.Resource({ ...visitor }, `/${visitor.userName}`);
-    */
-    res.setHeader('status', 200);
-    res.setHeader('Content-Type', 'application/hal+json');
-    res.send(resource);
   } catch (err) {
     winston.error('error while getting hello world by name');
     return {};
