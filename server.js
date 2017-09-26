@@ -20,8 +20,12 @@ app.use(controllers);
 // Maybe this will be set by environment later, so save to a const
 // helloWorld does not need database
 const url = 'mongodb://localhost:27017/my-first-mern-app';
+const mongoConnect = mongoose.connect(url, {
+  useMongoClient: true,
+});
 
-mongoose.connect(url, (err, db) => {
+mongoConnect.then((err, db) => {
+
   if (err) {
     return winston.error('error while connecting to mongodb', err);
   }
